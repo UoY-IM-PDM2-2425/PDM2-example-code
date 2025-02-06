@@ -1,0 +1,5 @@
+body {
+    padding: 0;
+    margin: 0;
+    touch-action: none; /* if planning to use touch events */
+}
