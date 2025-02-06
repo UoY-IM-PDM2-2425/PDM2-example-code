@@ -1,0 +1,1 @@
+This is where the solutions for the practicals are going to be published weekly.
