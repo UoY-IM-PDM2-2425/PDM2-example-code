@@ -7,6 +7,10 @@ function setup() {
 
     const pete = new FurryAnimal("Peter", 50, 3, color(255, 0, 0));
     console.log(pete.call());
+
+    const rupert = new Bird("Rupert", 100, 42, "tall beak");
+    rupert.decreaseHealth();
+    console.log(rupert.getHealthLevel());
 }
 
 
@@ -204,4 +208,6 @@ class Bird extends Animal {
         super.decreaseHealth();
         super.decreaseHealth();
     }
+
+   
 }
