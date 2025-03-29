@@ -16,31 +16,17 @@ function setup() {
   createCanvas(400, 400);
   noSmooth();
 
-  let _c = 4; // col lookup into spritesheet
-  let _r = 2; // row lookup into spritesheet
+  let col = 4; // col lookup into spritesheet
+  let row = 2; // row lookup into spritesheet
   imageMode(CENTER);
   upscaled_image = createImage(spriteSize, spriteSize);
   // Don't resize when copying. This will cause interpolation to happen.
-  upscaled_image.copy(
-    tileMap,
-    _c * spriteSize,
-    _r * spriteSize,
-    spriteSize,
-    spriteSize,
-    0,
-    0,
-    spriteSize,
-    spriteSize
-  );
+  //copy pixel from source image(tileMap), resize and save to unscale_image
+  upscaled_image.copy(tileMap, col * spriteSize, row * spriteSize, spriteSize, spriteSize, 0, 0, spriteSize, spriteSize);
 }
 
 function draw() {
   // Only resize when you actually draw the sprite
   background(255);
-  //setTimeout(1000);
-  image(upscaled_image, width*0.5, height*0.5, spriteScaled, spriteScaled);
-
+  image(upscaled_image, width/2, height/2, spriteScaled, spriteScaled);
 }
-
-
-

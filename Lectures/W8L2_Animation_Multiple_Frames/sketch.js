@@ -1,11 +1,11 @@
 let frame1;
 let frame2;
 let frame3;
-let index = 0;
+let animationSpeed = 0.0;
 let sprite = [];
 
 function preload() {
-  // Load the image files.
+  // Image assets fromn https://creative-coding.decontextualize.com/making-games-with-p5-play/
   frame1 = loadImage("assets/asterix_normal0001.png");
   sprite.push(frame1);
   frame2 = loadImage("assets/asterix_normal0002.png");
@@ -21,9 +21,10 @@ function setup() {
 
 function draw() {
   background(220);
-  index += 0.1
-  let curindex = floor(index) % this.len;
-  image(sprite[curindex], 100, height/2, 100,100);
+  animationSpeed += 0.1
+  
+  let currentIndex = floor(animationSpeed) % sprite.length;
+  image(sprite[currentIndex], width/100, height/100, 100, 100);
 
 
 }
