@@ -18,11 +18,11 @@ let confidence = 0;
 
 function modelReady() {
   console.log("Model is ready")
-  classifier.predict(gotResult)
+  classifier.classify(video, gotResult)
 }
 
 // A function to run when we get any errors and the results
-function gotResult(error, results) {
+function gotResult(results, error) {
   // Display error in the console
   if (error) {
     console.error(error);
@@ -33,7 +33,7 @@ function gotResult(error, results) {
 	label = results[0].label;
 	confidence = results[0].confidence;
 	
-  classifier.predict(gotResult) // call it continuosuly frame by frame
+  classifier.classify(video, gotResult) // call it continuosuly frame by frame
   }
 }
 
