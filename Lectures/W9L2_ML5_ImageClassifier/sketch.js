@@ -18,7 +18,7 @@ function preload() {
 }
 
 // A function to run when we get any errors and the results
-function gotResult(error, results) {
+function gotResult(results, error) {
 	// Display error in the console
 	if (error) {
 	  console.error(error);
