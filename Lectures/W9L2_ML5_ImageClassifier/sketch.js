@@ -14,7 +14,7 @@ let confidence = 0;
 
 function preload() {
   classifier = ml5.imageClassifier('MobileNet');
-  img = loadImage('assets/Golden_Retriever_Hund_Dog.jpg');
+  img = loadImage('assets/cat2.jpg');
 }
 
 // A function to run when we get any errors and the results
